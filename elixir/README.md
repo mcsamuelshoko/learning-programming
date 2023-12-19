@@ -17,7 +17,7 @@ IO.puts('hello world!')
 
 ###### *The list of toics is based on the Cheatsheet pdf.
 
-|Topic | Progress | Comment|
+|Topic | Completed | Comment|
 |---|---|---|
 |Command Line| | |
 |iex Commands | | |
