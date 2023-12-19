@@ -1,4 +1,4 @@
-hello world!
+hello elixir!
 
 ```elixir
 IO.puts('hello world!')
