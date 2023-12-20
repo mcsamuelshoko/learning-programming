@@ -18,25 +18,25 @@ IO.puts('hello world!')
 ###### *The list of topics is based on the Cheatsheet pdf.
 
 |Topic | Completed | Comment|
-|---|---|---|
-|Command Line| | |
-|iex Commands | | |
-|Operators | | |
-|Types | | |
-|Anonymous Functions | | |
-|Named Functions | | |
-|Modules | | |
-|Guard Clause | | |
-|Comprehensions | | |
-|dos: vs do/end | | |
+|---|:---:|---|
+|Command Line|⭕ | |
+|iex Commands |⭕ | |
+|Operators |⭕ | |
+|Types |⭕ | |
+|Anonymous Functions |⭕ | |
+|Named Functions |⭕ | |
+|Modules |⭕ | |
+|Guard Clause |⭕ | |
+|Comprehensions |⭕ | |
+|dos: vs do/end |⭕ | |
 | -- | -- | -- |
-|Maps | | |
-|Protocols | | |
-|Regexp | | |
-|Processes | | |
-|Pipelines | | |
-|Control flow | | |
-|Metaprogramming | | |
-|Predefined Names | | |
-|Structs | | |
-|Sigils | | |
+|Maps |⭕ | |
+|Protocols |⭕ | |
+|Regexp |⭕ | |
+|Processes |⭕ | |
+|Pipelines |⭕ | |
+|Control flow |⭕ | |
+|Metaprogramming |⭕| |
+|Predefined Names |⭕ | |
+|Structs |⭕ | |
+|Sigils |⭕ | |

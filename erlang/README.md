@@ -18,5 +18,5 @@ hello erlang!
 ###### *The list of topics is based on the Cheatsheet pdf.
 
 |Topic | Completed | Comment|
-|---|---|---|
-|introduction| | |
+|---|:---:|---|
+|introduction|⭕ | |
