@@ -15,7 +15,7 @@ IO.puts('hello world!')
 
 <br/>
 
-###### *The list of toics is based on the Cheatsheet pdf.
+###### *The list of topics is based on the Cheatsheet pdf.
 
 |Topic | Completed | Comment|
 |---|---|---|
