@@ -8,8 +8,9 @@ IO.puts('hello world!')
 
 ### Will be learning with content which includes these links
 
-**Cheatsheet PDF:** [<https://media.pragprog.com/titles/elixir/ElixirCheat.pdf>]
-**LearnXinYminutes:** [<https://learnxinyminutes.com/docs/elixir/>]
+**Cheatsheet PDF:** [<https://media.pragprog.com/titles/elixir/ElixirCheat.pdf>]  
+**LearnXinYminutes:** [<https://learnxinyminutes.com/docs/elixir/>]  
+**Succinctly Series 🆓Book:** [<https://www.syncfusion.com/succinctly-free-ebooks?searchkey=elixir&type=all>]  
 
 ---
 
