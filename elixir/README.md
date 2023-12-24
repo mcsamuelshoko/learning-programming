@@ -20,10 +20,10 @@ IO.puts('hello world!')
 
 |Topic | Completed | Comment|
 |---|:---:|---|
-|Command Line|⭕ | |
-|iex Commands |⭕ | |
-|Operators |⭕ | |
-|Types |⭕ | |
+|Command Line|✅ |nice, i liked the command-line docs. |
+|iex Commands |✅ |ooh..what  |
+|Operators |✅ |floats were crazy |
+|Types |✅ |wow,.. atoms |
 |Anonymous Functions |⭕ | |
 |Named Functions |⭕ | |
 |Modules |⭕ | |
