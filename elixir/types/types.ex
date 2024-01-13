@@ -2,8 +2,8 @@
 
 # [ elixir uses data types & data structures, and no objects 🙅‍♂️ ]
 
-# numbers
-a = 1 + 2
+# integer
+a = 10 + 0x2 + 10_00 + 0b10
 IO.puts(a)
 
 # chars
