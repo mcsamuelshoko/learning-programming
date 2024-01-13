@@ -3,7 +3,7 @@
 # [ elixir uses data types & data structures, and no objects 🙅‍♂️ ]
 
 # integer
-a = 10 + 0x2 + 10_00 + 0b10
+a = 10 + 0xc + 1_000 + 0b10
 IO.puts(a)
 
 # chars
@@ -12,6 +12,7 @@ IO.puts(char)
 
 # strings
 b = "hello"
+# string concatenation
 IO.puts(b <> " e-l-i-x-i-r !")
 
 # floats
