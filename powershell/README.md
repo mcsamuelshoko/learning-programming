@@ -11,7 +11,8 @@ echo "hello world!"
 **IDERA PDFs [all 3]:** [<https://www.idera.com/resource-center/whitepapers/powershell-ebook/>]  
 **Reference 🆓Book:** [<https://goalkicker.com/PowerShellBook/>]  
 
-
+---
+### *📓 [Polyglot Notebook Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) for [vscode](https://code.visualstudio.com/)
 ---
 
 <br/>
