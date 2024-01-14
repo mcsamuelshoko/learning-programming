@@ -1,4 +1,4 @@
-hello [mono-repo](https://monorepo.tools/) world! [[💚]]()
+hello [mono-repo](https://monorepo.tools/) world! [[💚]](https://bazel.build/)
 
 # WELCOME
 
@@ -11,6 +11,6 @@ hello [mono-repo](https://monorepo.tools/) world! [[💚]]()
 
 ## 🌐 [<https://monorepo.tools/>] 
 
-        ** FROM THE PROPER DEFINITION, THIS ISN'T A MONOREPO YET..JUST A BIG REPO 😅
+        ** FROM THE PROPER DEFINITION, TURNS OUT THIS ISN'T A MONOREPO YET..JUST A BIG REPO 😅
 
 ## 🧰 [<https://bazel.build/>]   
