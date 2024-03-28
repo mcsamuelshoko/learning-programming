@@ -1,0 +1,1 @@
+link to a very good starter video: [<https://youtu.be/NReDubvNjRg>]
