@@ -1,3 +1,6 @@
+![github-banner](./Github-banner.png)
+
+---
 
 Hello C++, again...
 
