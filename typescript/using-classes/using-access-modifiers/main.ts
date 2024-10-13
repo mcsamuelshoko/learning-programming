@@ -3,12 +3,26 @@ export function add(a: number, b: number): number {
 }
 
 export class Product {
-  private name;
-  private price;
+  // private name;
+  // private price;
 
-  constructor(name: string, price: number) {
+  constructor(protected name: string, protected price: number) {
+
+  }
+
+  //setters
+  setName(name: string): void {
     this.name = name;
-    this.price = price;
+  }
+  setPrice(p: number): void {
+    this.price = p;
+  }
+  // getters
+  getName(): string {
+    return this.name;
+  }
+  getPrice(): number {
+    return this.price;
   }
 
   copy(name: string) {
@@ -20,7 +34,9 @@ export class Product {
   }
 }
 
-let table1:Product = new  Product('table',15);
+let table1: Product = new Product('myTable', 15);
+table1.setName('helloTable');
+console.log(table1);
 
 // Learn more at https://deno.land/manual/examples/module_metadata#concepts
 // if (import.meta.main) {
