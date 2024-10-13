@@ -20,9 +20,9 @@ export class Product {
   }
 }
 
-let table1:Product = Product('table',15);
+let table1:Product = new  Product('table',15);
 
 // Learn more at https://deno.land/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
-}
+// if (import.meta.main) {
+//   console.log("Add 2 + 3 =", add(2, 3));
+// }
