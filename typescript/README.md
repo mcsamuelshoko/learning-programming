@@ -21,7 +21,7 @@ console.log( "hello world!" );
 
 |Topic | Completed | Comment|
 |---|:---:|---|
-|Using Classes|⭕ |--|
+|Using Classes|✅ |quite interesting and partly familiar|
 |Generic Types|⭕ |--|
 |Type Narrowing|⭕ |--|
 |Mapped Types|⭕ |--|
