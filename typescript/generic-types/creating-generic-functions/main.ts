@@ -1,8 +1,17 @@
-export function add(a: number, b: number): number {
-  return a + b;
+// A non-generic function
+
+function _firstOrNull(array: string[]): string | null {
+  return array.length === 0 ? null : array[0];
 }
 
-// Learn more at https://deno.land/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+// Generic function syntax
+function firstOrNull<T>(array: T[]): T | null {
+  return array.length === 0 ? null : array[0];
 }
+
+console.log(firstOrNull<string>(['ball', 'apple', 'can']));
+console.log(firstOrNull<number>([3, 43, 643]));
+
+// Type inference on generic functions
+const first = firstOrNull([14, 56, 75]);
+console.log(first);
