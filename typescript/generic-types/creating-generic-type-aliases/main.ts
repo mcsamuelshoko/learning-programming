@@ -8,7 +8,7 @@ type typeName<T1, T2> = {
 
 // TODO - create the Form generic type
 
-interface Form<T> {
+type Form<T> = {
   errors: {
     [K in keyof T]?: string;
   },
