@@ -6,8 +6,6 @@ type typeName<T1, T2> = {
 
 // Generic type alias example
 
-// TODO - create the Form generic type
-
 type Form<T> = {
   errors: {
     [K in keyof T]?: string;
