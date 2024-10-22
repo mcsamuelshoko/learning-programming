@@ -11,7 +11,7 @@ type Animal = {
 }
 
 function addLeg(animal: Animal) {
-  animal.legs = animal.legs + 1; // 💥 - Object is possibly 'undefined'
+  //* animal.legs = animal.legs + 1; // 💥 - Object is possibly 'undefined'
 }
 
 /**
