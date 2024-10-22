@@ -31,3 +31,5 @@ function merge<Names extends string[], Scores extends number[]>(
 }
 
 let scores = merge(["Bill", "Jane"], [8, 9]);
+
+//* Finished Quiz on 100% niiiice !
