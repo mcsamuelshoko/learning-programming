@@ -12,3 +12,5 @@ function duplicate(text: string | null) {
 }
 
 console.log(duplicate("hello"));
+
+// Non-null assertion operator syntax
