@@ -12,4 +12,4 @@ const scoreDoubled = doubleScores(scores);
 
 // ! scores has been unexpectedly changed
 
-console.log( scores);
+console.log( 'scores: ',scores);
