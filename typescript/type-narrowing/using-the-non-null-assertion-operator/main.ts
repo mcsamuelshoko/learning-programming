@@ -8,7 +8,7 @@ function duplicate(text: string | null) {
   };
   fixString();
 
-  return text.concat(text);
+  return text!.concat(' ',text!);
 }
 
 console.log(duplicate("hello"));
