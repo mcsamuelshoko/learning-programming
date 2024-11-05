@@ -25,7 +25,7 @@
 //* An example
 
 class Contact {
-  constructor(public emailAddress: string) {}
+  constructor(public emailAddress: string) { }
 }
 class Person extends Contact {
   constructor(
@@ -44,7 +44,13 @@ class Organisation extends Contact {
 
 function sayHello(contact: Contact) {
   // TODO - Output Hello {firstName} if a person
+  if (contact instanceof Person) {
+    console.log(`Helllo ${contact.firstName}`);
+  }
   // TODO - Output Hello {name} if an organisation
+  if (contact instanceof Organisation) {
+    console.log('Hello ' + contact.name);
+  }
 }
 
 const bob = new Person("Bob", "Young", "bob.young@somewhere.com");
@@ -55,3 +61,11 @@ const redBricks = new Organisation(
 
 sayHello(bob);
 sayHello(redBricks);
+
+/**
+ * Summary
+ * The instanceof operator can be used to help TypeScript 
+ * narrow the type of a class object variable. 
+ * It only works on class structures and 
+ * not other TypeScript structures, such as interfaces.
+ */
