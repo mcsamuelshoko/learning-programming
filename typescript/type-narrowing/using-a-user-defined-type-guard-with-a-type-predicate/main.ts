@@ -37,9 +37,23 @@ interface Organisation {
 }
 type Contact = Person | Organisation;
 
+function isPerson(contact: Contact):contact is Person {
+  return (contact as Person).firstName !== undefined;
+}
+
+function isOrganisation(contact: Contact):contact is Organisation{
+  return (contact as Organisation).name !== undefined;
+}
+
 function sayHello(contact: Contact) {
   // TODO - Output Hello {firstName} if a person
+  if(isPerson(contact)){
+    console.log('hello person- ' + contact.firstName);
+  }
   // TODO - Output Hello {name} if an organisation
+  if(isOrganisation(contact)){
+    console.log('hallo org- '+ contact.name)
+  }
 }
 
 const bob: Person = {
@@ -53,3 +67,15 @@ const redBricks: Organisation = {
 
 sayHello(bob);
 sayHello(redBricks);
+
+/**
+ * Nice!
+ * 
+ * Summary
+ * A user-defined type guard can carry out checks on its 
+ * parameter and use a type predicate to tell TypeScript its type. 
+ * A user-defined type guard that uses a type predicate must return a boolean value.
+ * In the next lesson, we will learn another method of implementing a user-defined type guard.
+ * 
+ * 
+ */
