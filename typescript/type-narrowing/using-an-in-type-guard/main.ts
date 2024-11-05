@@ -33,7 +33,13 @@ type Contact = Person | Organisation;
 
 function sayHello(contact: Contact) {
   // TODO - Output Hello {firstName} if a person
+  if("firstName" in contact){
+    console.log('Hello ' + contact.firstName)
+  }
   // TODO - Output Hello {name} if an organisation
+  if("name" in contact){
+    console.log("Hello " + contact.name)
+  }
 }
 
 const bob: Person = {
@@ -48,3 +54,11 @@ const redBricks: Organisation = {
 sayHello(bob);
 sayHello(redBricks);
 
+/**
+ * 
+ * Summary
+ * The in operator can be used to help TypeScript 
+ * narrow the type of an object variable by 
+ * its property name. It is arguably more useful 
+ * than instanceof because it can be applied to any object structure.
+ */
