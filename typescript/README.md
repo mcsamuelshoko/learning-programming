@@ -7,12 +7,15 @@ console.log( "hello world!" );
 ---
 
 ### Will be learning with content which includes these links  
+
 **LearnInXYMinutes:** [<https://learnxinyminutes.com/docs/typescript/>]  
 **Learn Typescript:** [<https://learntypescript.dev/>]  
-**Reference 🆓Book:** [<https://goalkicker.com/TypeScriptBook2/>]   
+**Reference 🆓Book:** [<https://goalkicker.com/TypeScriptBook2/>]
 
 ---
+
 ### *📓 [Polyglot Notebook Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) for [vscode](https://code.visualstudio.com/)
+
 ---
 
 <br/>
@@ -23,7 +26,7 @@ console.log( "hello world!" );
 |---|:---:|---|
 |Creating Types|⭕ |--|
 |Using Classes|✅ |quite interesting and partly familiar|
-|Generic Types|⭕ |--|
+|Generic Types|✅ |felt familiar to c++ and also good|
 |Type Narrowing|⭕ |--|
 |Mapped Types|⭕ |--|
 |Conditional Types|⭕ |--|
