@@ -81,35 +81,56 @@
 
  */
 
-  //* An example
+//* An example
 
-  interface Person {
-    firstName: string;
-    surname: string;
-    contactType: "person";
+interface Person {
+  firstName: string;
+  surname: string;
+  contactType: "person";
+}
+interface Organisation {
+  name: string;
+  contactType: "organisation";
+}
+type Contact = Person | Organisation;
+
+function sayHello(contact: Contact) {
+  // TODO - Output Hello {firstName} if a person
+  switch (contact.contactType) {
+    case 'person':
+      console.log('hello ' + contact.firstName);
+      break;
+    case 'organisation':
+      console.log('hello ' + contact.name);
+      break;
   }
-  interface Organisation {
-    name: string;
-    contactType: "organisation";
-  }
-  type Contact = Person | Organisation;
-  
-  function sayHello(contact: Contact) {
-    // TODO - Output Hello {firstName} if a person
-    // TODO - Output Hello {name} if an organisation
-  }
-  
-  const bob: Person = {
-    firstName: "Bob",
-    surname: "Young",
-    contactType: "person"
-  };
-  
-  const redBricks: Organisation = {
-    name: "Red Bricks",
-    contactType: "organisation"
-  };
-  
-  sayHello(bob);
-  sayHello(redBricks);
-  
+  // TODO - Output Hello {name} if an organisation
+}
+
+const bob: Person = {
+  firstName: "Bob",
+  surname: "Young",
+  contactType: "person"
+};
+
+const redBricks: Organisation = {
+  name: "Red Bricks",
+  contactType: "organisation"
+};
+
+sayHello(bob);
+sayHello(redBricks);
+
+/**
+ * 
+ * Nice!
+ *
+ * Summary
+ * The discriminated union pattern is a way of narrowing a union type. 
+ * A requirement for this pattern is for the types in the union to have 
+ * a common property. Conditional statements can then be used on the 
+ * common property as a type guard to narrow the union type.
+ * 
+ * Good stuff!
+ * 
+ */
