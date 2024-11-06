@@ -49,8 +49,8 @@ IO.puts('hello world!')
 
 |Topic | Completed | Comment|
 |---|:---:|---|
-|introduction - The language |⭕ | |
-|Basic Types |⭕ | |
+|introduction - The language |✅ | nice story |
+|Basic Types |✅ | did in REPL terminal |
 |Modules and functions |⭕ | |
 |Pattern Matching |⭕ | |
 |Recursion |⭕ | |
