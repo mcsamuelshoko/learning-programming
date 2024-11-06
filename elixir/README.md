@@ -16,7 +16,7 @@ IO.puts('hello world!')
 
 <br/>
 
-###### *The list of topics is based on the Cheatsheet pdf.
+###### *The list of topics is based on the [Cheatsheet](https://media.pragprog.com/titles/elixir/ElixirCheat.pdf) pdf
 
 |Topic | Completed | Comment|
 |---|:---:|---|
@@ -41,3 +41,32 @@ IO.puts('hello world!')
 |Predefined Names |⭕ | |
 |Structs |⭕ | |
 |Sigils |⭕ | |
+
+<br/>
+<br/>
+
+###### *The list of topics is based on the [Elixir Succinctly](https://www.syncfusion.com/succinctly-free-ebooks?searchkey=elixir&type=all) pdf
+
+|Topic | Completed | Comment|
+|---|:---:|---|
+|introduction - The language |⭕ | |
+|Basic Types |⭕ | |
+|Modules and functions |⭕ | |
+|Pattern Matching |⭕ | |
+|Recursion |⭕ | |
+|Helpful Modules |⭕ | |
+|Control flow |⭕ | |
+|Guards |⭕ | |
+|Pipe Operator |⭕ | |
+|Type specifications |⭕ | |
+|Behavior and protocols |⭕ | |
+|Macros |⭕ | |
+|The Platform |⭕ | |
+|Elixir Applications |⭕ | |
+|GenServer |⭕ | |
+|Supervisors |⭕ | |
+|Sample Application |⭕ | |
+|The first test |⭕ | |
+|Control the rover |⭕ | |
+|Role supervisor |⭕ | |
+|Introducing Plug and Cowboy |⭕ | |
