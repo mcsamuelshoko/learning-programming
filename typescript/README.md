@@ -27,7 +27,7 @@ console.log( "hello world!" );
 |Creating Types|⭕ |--|
 |Using Classes|✅ |quite interesting and partly familiar|
 |Generic Types|✅ |felt familiar to c++ and also good|
-|Type Narrowing|⭕ |--|
+|Type Narrowing|✅|a bit disoriented or its just me today|
 |Mapped Types|⭕ |--|
 |Conditional Types|⭕ |--|
 |Immutable Types|⭕ |--|
