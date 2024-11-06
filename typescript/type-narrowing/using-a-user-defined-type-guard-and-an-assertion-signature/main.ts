@@ -43,9 +43,26 @@ interface Organisation {
   name: string;
 }
 type Contact = Person | Organisation;
+
+function assertIsPerson(contact: Contact): asserts contact is Person {
+  if ((contact as Person).firstName === undefined) {
+    throw new Error('Not a person');
+  }
+}
+
+function assertIsOrganisation(contact: Contact): asserts contact is Organisation {
+  if ((contact as Organisation).name === undefined) {
+    throw new Error('not an organisation.');
+  }
+}
+
 function sayHello(contact: Contact) {
-  // TODO - Output Hello {firstName} if a person
+  // // TODO - Output Hello {firstName} if a person
+  // assertIsPerson(contact);
+  // console.log('Hello ' + contact.firstName);
   // TODO - Output Hello {name} if an organisation
+  assertIsOrganisation(contact);
+  console.log('hello ' + contact.name)
 }
 const bob: Person = {
   firstName: "Bob",
@@ -56,3 +73,16 @@ const redBricks: Organisation = {
 };
 sayHello(bob);
 sayHello(redBricks);
+
+/***
+ * Nice!
+ * 
+ * Summary
+ * A user-defined type guard can carry out checks on its parameter 
+ * and use an assertion signature to tell TypeScript what type it is. 
+ * A user-defined type guard that uses an assertion signature throws 
+ * an error if the checks fail.
+ * 
+ * In the next lesson, we will learn about the discriminated union pattern.
+ * 
+ */
