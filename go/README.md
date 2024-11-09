@@ -8,6 +8,7 @@ fmt.Print('hello golang!');
 
 ### Will be learning with content which includes these links  
 **LearnInXYMinutes:** [<https://learnxinyminutes.com/docs/go/>]  
+**Go Succinctly:**  [<https://www.syncfusion.com/succinctly-free-ebooks/confirmation/go-succinctly>]  
 **Learn Go:** [<https://go.dev/tour/>]  
 **Go by example /Reference:** [<https://gobyexample.com/>]  
 
@@ -16,6 +17,25 @@ fmt.Print('hello golang!');
 ---
 
 <br/>
+
+###### *The list of topics is from the [`'Go succinctly'`](https://www.syncfusion.com/succinctly-free-ebooks/confirmation/go-succinctly) book
+
+|Topic | Completed | Comment|
+|---|:---:|---|
+|1. Welcome |⭕ |--|
+|2. Introducing Go|⭕ |--|
+|3. Lets Go! |⭕ |--|
+|4. Variables, Constants & Assignments|⭕ |--|
+|5. Basic Data Types|⭕ |--|
+|6. Control Structures|⭕ |--|
+|7. Arrays-Slices-&-Maps|⭕ |--|
+|8. User-Defined-Types|⭕ |--|
+|9. Concurrency |⭕ |--|
+|10. Standard Packages |⭕ |--|
+|11. Go Further |⭕ |--|
+
+
+<br/><br/>
 
 ###### *The list of topics is from the `'Tour of Go'` website
 
