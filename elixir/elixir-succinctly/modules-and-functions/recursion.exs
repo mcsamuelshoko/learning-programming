@@ -26,7 +26,6 @@ defmodule TailCallFactorial do
   end
 end
 
-IO.puts "Starting Tail-call Optimized"
+IO.puts("Starting Tail-call Optimized")
 
 IO.puts(TailCallFactorial.do_it(100))
-
