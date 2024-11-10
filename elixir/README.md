@@ -52,9 +52,9 @@ IO.puts('hello world!')
 |---|:---:|---|
 |introduction - The language |✅ | nice story |
 |Basic Types |✅ | did in REPL terminal |
-|Modules and functions |⭕ | |
-|Pattern Matching |⭕ | |
-|Recursion |⭕ | |
+|Modules and functions |✅ | nice, and feels a bit unfamiliar |
+|Pattern Matching |✅ | aaah, very useful |
+|Recursion |✅ | thank you \:\) |
 |Helpful Modules |⭕ | |
 |Control flow |⭕ | |
 |Guards |⭕ | |
