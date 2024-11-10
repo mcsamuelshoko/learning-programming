@@ -22,8 +22,8 @@ fmt.Print('hello golang!');
 
 |Topic | Completed | Comment|
 |---|:---:|---|
-|1. Welcome |⭕ |--|
-|2. Introducing Go|⭕ |--|
+|1. Welcome |✅ |thanks \:\)|
+|2. Introducing Go|✅ |WoW,... just WoW!|
 |3. Lets Go! |⭕ |--|
 |4. Variables, Constants & Assignments|⭕ |--|
 |5. Basic Data Types|⭕ |--|
