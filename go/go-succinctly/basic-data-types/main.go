@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"strconv"
 )
 
 func main() {
@@ -95,6 +96,31 @@ func stringTypes() {
 			fmt.Println(str[17:23])
 			fmt.Println(str[:13])
 			fmt.Println(str[31:])
+		}
+
+		// string manipulation
+		{
+			// int to string
+			{
+				strInt := "435"
+				convInt, _ := strconv.Atoi(strInt)
+
+				fmt.Printf("convInt = %d, & type is %s\n", convInt, reflect.TypeOf(strInt))
+
+				strFloat := "35.6"
+				convFloat, _ := strconv.ParseFloat(strFloat, 32)
+				fmt.Printf("convFloat = %f, & type is %s\n", convFloat, reflect.TypeOf(convFloat))
+
+			}
+			// str boolean operations
+			{
+				strBool := "true"
+				convBool, _ := strconv.ParseBool(strBool)
+
+				fmt.Printf("convBool = %t, & type is %s\n", convBool, reflect.TypeOf(convBool))
+
+				fmt.Println("true" > "truer")
+			}
 		}
 	}
 
