@@ -52,10 +52,26 @@
 type Contact = {
   name: string;
   email?: string;
+  age?: number;
 };
 
-const bob: Contact = {
-  name: "Bob"
+type RequiredProperties<T> = {
+  [K in keyof T]-?: T[K];
 };
+
+const bob: RequiredProperties<Contact> = {
+  name: "Bob",
+  email: "bob@somewhere.com",
+  age: 30,
+};
+
 
 console.log(bob);
+
+/**
+* Summary
+* 
+* Mapped type modifiers add flexibility in mapped 
+* types to make properties required and writable.
+* 
+*/
