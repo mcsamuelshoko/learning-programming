@@ -16,4 +16,6 @@
 
 // An example
 
-type ContactDetails = { name: string; email: string };
+type ContactDetails = { name: string; email: string; mobile: string };
+
+let keys: keyof ContactDetails;
