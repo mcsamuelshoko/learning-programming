@@ -20,12 +20,18 @@
 
 //* An example
 
-type ContactDetails = {
-  name: string;
-  email: string;
-};
-const initialContactDetails: ContactDetails = { name: "", email: "" };
 
-function saveContactDetails(details: ContactDetails) {
+const initialContactDetails = { name: "", email: "", mobile: "" };
+
+function saveContactDetails(details: typeof initialContactDetails) {
   console.log(details);
 }
+
+/**
+* Summary
+* 
+* The typeof type annotation can be used to extract the type 
+* from an object. This approach reduces the types we need 
+* to create, making our code more maintainable.
+*  
+*/
