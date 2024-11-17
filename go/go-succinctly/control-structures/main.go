@@ -23,9 +23,16 @@ func main() {
 		fmt.Printf("%s is %s\n", os.Args[4], oddOrEven(os.Args[4]))
 	}
 
-	// Looping with the `for` statement
-	for i := 1; i < len(os.Args); i++ {
-		fmt.Printf("%s is %s\n", os.Args[i], oddOrEven(os.Args[i]))
+	{
+		// Looping with the `for` statement
+		for i := 1; i < len(os.Args); i++ {
+			fmt.Printf("%s is %s\n", os.Args[i], oddOrEven(os.Args[i]))
+		}
+	}
+
+	{
+		// The Switch statement
+
 	}
 
 }
