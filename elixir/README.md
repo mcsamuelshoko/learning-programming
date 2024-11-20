@@ -55,7 +55,7 @@ IO.puts('hello world!')
 |Modules and functions |✅ | nice, and feels a bit unfamiliar |
 |Pattern Matching |✅ | aaah, very useful |
 |Recursion |✅ | thank you \:\) |
-|Helpful Modules |⭕ | |
+|Helpful Modules |✅ |aaah nice, truly helpful |
 |Control flow |⭕ | |
 |Guards |⭕ | |
 |Pipe Operator |⭕ | |
