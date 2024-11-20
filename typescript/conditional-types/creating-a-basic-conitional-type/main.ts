@@ -21,9 +21,26 @@
 //* An example
 
 type NullableString = string | null;
+type RemoveNull<T> = T extends null ? never : T;
 
-let firstName: NullableString;
-firstName = null;
+
+let firstName: RemoveNull<NullableString>;
+// firstName = null;
 firstName = "Bob";
 
 console.log(firstName);
+{
+    let firstName: NonNullable<NullableString>;
+    // firstName = null;
+    firstName = "Bob";
+    console.log('non-nullable: ', firstName);
+}
+
+
+/**
+ * Summary
+ * With the help of generics and the never type, conditional 
+ * types allow utility types to be created that remove 
+ * possible values from a type. This approach is heavily 
+ * used within Typescript's standard utility types.
+ */
