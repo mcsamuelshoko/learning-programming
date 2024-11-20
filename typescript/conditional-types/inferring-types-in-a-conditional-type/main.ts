@@ -31,6 +31,10 @@
  */
 
 //* An Example
+
+type FunctionReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : T;
+
+
 function addPerson(personName: string) {
   return {
     type: "AddPerson",
@@ -47,3 +51,25 @@ function removePerson(id: number) {
 
 type AddPersonType = typeof addPerson;
 type RemovePersonType = typeof removePerson;
+
+type Actions =
+  | FunctionReturnType<AddPersonType>
+  | FunctionReturnType<RemovePersonType>;
+
+const person = { name: "Fred" }
+// type PersonType = FunctionReturnType<typeof person>
+
+
+type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => R ? R : any;
+
+/**
+ *! Summary
+ * ********
+ * 
+ * The infer keyword allows types to be extracted from conditions 
+ * in conditional types. This is often used within Typescript's 
+ * standard utility types.
+ * 
+ * In the next lesson, we will gain a deep understanding of some 
+ * of TypeScripts standard conditional utility types.
+ */
