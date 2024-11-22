@@ -67,4 +67,31 @@ func main() {
 		r.width = 45
 
 	}
+
+	// Methods
+	{
+		r := rect{height: 45, width: 80}
+		fmt.Printf("Height %d\n", r.height)
+		fmt.Printf("width %d\n", r.width)
+		fmt.Printf("Area: %d\n", r.area())
+
+		// adding a method that modifies the struct 'instance'
+		r.double()
+		fmt.Printf("Height: %d\n", r.height)
+		fmt.Printf("width : %d\n", r.width)
+		fmt.Printf("Area  : %d\n", r.area())
+	}
+}
+
+func (r rect) area() int {
+	h := r.height
+	w := r.width
+
+	return h * w
+}
+
+func (r *rect) double() {
+	fmt.Println("\nDouble it!\n")
+	r.height *= 2
+	r.width *= 2
 }
