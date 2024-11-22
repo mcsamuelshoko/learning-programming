@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
@@ -101,6 +102,47 @@ func main() {
 		mySliceCopy[3] = 93794
 		fmt.Printf("mySlice: %v\n", mySlice)
 		fmt.Printf("mySliceCopy: %v\n", mySliceCopy)
+	}
+
+	// Maps
+	{
+		myMap := make(map[string]int, 4)
+		myMap["martha"] = 44
+		myMap["Agatha"] = 34
+
+		fmt.Println(myMap)
+
+		// easier initialization
+		actor := map[string]int{
+			"Paltro":  43,
+			"Cruise":  53,
+			"Redford": 79,
+			"Diaz":    43,
+			"Kilmer":  56,
+			"Pacino":  75,
+			"Ryder":   44,
+		}
+
+		// maps dont have sorting order
+		for i := 1; i < 8; i++ {
+			fmt.Printf("\nRun NUMBER %d\n", i)
+			for key, value := range actor {
+				fmt.Printf("%s : %d years old\t", key, value)
+			}
+		}
+
+		//sorting an array
+		var sortedActor []string
+		for key := range actor {
+			sortedActor = append(sortedActor, key)
+		}
+		//	sort the slice alphabetically
+		sort.Strings(sortedActor)
+		fmt.Println("\n=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=")
+		// use sorted keys
+		for _, name := range sortedActor {
+			fmt.Printf("%s :%d years old\n", name, actor[name])
+		}
 	}
 }
 
