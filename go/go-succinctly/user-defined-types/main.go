@@ -9,6 +9,16 @@ type rect struct {
 	width  int
 }
 
+type Discount struct {
+	percent     float32
+	promotionId string
+}
+
+type ManagersSpecial struct {
+	Discount
+	extraoff float32
+}
+
 func main() {
 	// Pointers
 	{
@@ -70,6 +80,8 @@ func main() {
 
 	// Methods
 	{
+
+		fmt.Println("-------------------[  METHODS  ]--------------------")
 		r := rect{height: 45, width: 80}
 		fmt.Printf("Height %d\n", r.height)
 		fmt.Printf("width %d\n", r.width)
@@ -80,6 +92,30 @@ func main() {
 		fmt.Printf("Height: %d\n", r.height)
 		fmt.Printf("width : %d\n", r.width)
 		fmt.Printf("Area  : %d\n", r.area())
+	}
+
+	// Embedded Types
+	{
+
+		fmt.Println("-------------------[  EMBEDDED TYPES  ]--------------------")
+		normalPrice := float32(99.99)
+		januarySale := Discount{15.00, "January"}
+		managerSpecial := ManagersSpecial{januarySale, 10.00}
+
+		discountedPrice := januarySale.Calculate(normalPrice)
+		managerDiscount := managerSpecial.Calculate(normalPrice)
+
+		fmt.Printf("Original price:        $%4.2f\n", normalPrice)
+		fmt.Printf("Discounted Percentage: %2.2f%%\n", januarySale.percent)
+
+		fmt.Printf("Discounted Price:  $%4.2f\n", discountedPrice)
+		fmt.Printf("Manager's special: $%4.2f\n", managerDiscount)
+
+	}
+
+	// Interfaces
+	{
+
 	}
 }
 
@@ -94,4 +130,12 @@ func (r *rect) double() {
 	fmt.Println("\nDouble it!\n")
 	r.height *= 2
 	r.width *= 2
+}
+
+func (d Discount) Calculate(originalPrice float32) float32 {
+	return originalPrice - (originalPrice / 100 * d.percent)
+}
+
+func (ms ManagersSpecial) Calculate(originalPrice float32) float32 {
+	return ms.Discount.Calculate(originalPrice) - ms.extraoff
 }
