@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 type rect struct {
@@ -17,6 +18,36 @@ type Discount struct {
 type ManagersSpecial struct {
 	Discount
 	extraoff float32
+}
+
+type Person struct {
+	Name string
+}
+
+type Animal struct {
+	Sound string
+}
+
+type Greeter interface {
+	SayHi() string
+}
+
+// this method is specific to the Person class
+func (p Person) SayHi() string {
+	return "Hello! My name is " + p.Name
+}
+
+// this method is specific to the Animal class
+func (a Animal) SayHi() string {
+	return a.Sound
+}
+
+/**
+*	This method can be called on any type that
+* 	implements the Greeter interface
+ */
+func greet(i Greeter) {
+	fmt.Println(i.SayHi())
 }
 
 func main() {
@@ -115,7 +146,40 @@ func main() {
 
 	// Interfaces
 	{
+		man := Person{Name: "Bob Smith"}
+		dog := Animal{Sound: "Woof! Woof!"}
 
+		fmt.Println("\nPerson: ")
+		greet(man)
+
+		fmt.Println("\nAnimal:	")
+		greet(dog)
+
+		// The empty interface
+		displayType(42)
+		displayType(3.14)
+		displayType("Special(non-ascii) Characters: ₩₱₥₾૱؋₭ἒἚἘἐἡἔἛἝῊἿῐΪᾐᾚ")
+		displayType(man)
+
+		// Type Assertion
+		var anything interface{} = "something"
+		aString := anything.(string)
+		fmt.Println(aString)
+
+		//! if Go is unable to perform the conversion, it will "panic."
+		// aInt := anything.(int)
+		// fmt.Println(aInt)
+
+		// protecting against assertion errors
+		{
+			var anything interface{} = "something"
+			aInt, ok := anything.(int)
+			if !ok {
+				fmt.Println("Cannot turn input into an integer")
+			} else {
+				fmt.Println(aInt)
+			}
+		}
 	}
 }
 
@@ -138,4 +202,18 @@ func (d Discount) Calculate(originalPrice float32) float32 {
 
 func (ms ManagersSpecial) Calculate(originalPrice float32) float32 {
 	return ms.Discount.Calculate(originalPrice) - ms.extraoff
+}
+
+func displayType(i interface{}) {
+	switch theType := i.(type) {
+	case int:
+		fmt.Printf("%d is an integer\n", theType)
+	case float64:
+		fmt.Printf("%f is a 64-bit float\n", theType)
+	case string:
+		fmt.Printf("%s is a string\n", theType)
+	default:
+		fmt.Printf("i don't know what %v is (...might be a `%v`)\n", theType, reflect.TypeOf(theType))
+
+	}
 }
