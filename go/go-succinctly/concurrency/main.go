@@ -2,7 +2,10 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"log"
 	"math/rand"
+	"net/http"
 	"strconv"
 	"time"
 )
@@ -55,6 +58,60 @@ func generateLimitedAccountNumber(accountNumberChannel chan int) {
 	}
 }
 
+type WebPage struct {
+	URL  string
+	Size int
+}
+
+type WebPages []WebPage
+
+// implementing the sort.Interface interface in WebPages
+
+func (slice WebPages) Len() int {
+	return len(slice)
+}
+
+func (slice WebPages) Less(i, j int) bool {
+	// Sort of size of response in descending order
+	return slice[i].Size < slice[j].Size
+}
+
+func (slice WebPages) Swap(i, j int) {
+	slice[i], slice[j] = slice[j], slice[i]
+}
+
+// Method for adding a new WebPage element to WebPages
+func (wp *WebPages) addElement(page WebPage) {
+	*wp = append(*wp, page)
+}
+
+// called as a goroutine to retrieve the length of each webpage
+func getWebPageLength(url string, resultsChannel chan WebPage) {
+	res, err := http.Get(url)
+	fmt.Println("\t➡️🌐 Getting URL: ", url)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer res.Body.Close()
+
+	// get the size of the response body
+
+	size, err := io.ReadAll(res.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("\t🌐⬇️ Finished reading URL: ", url)
+
+	// populate the WebPage struct and add it to the channel
+	var page WebPage
+	page.URL = url
+	page.Size = len(size)
+	resultsChannel <- page
+	fmt.Println("\t🌍🌎🌏 completed URL: ", url)
+
+}
+
 func main() {
 	// Routines
 	if false {
@@ -63,7 +120,7 @@ func main() {
 	}
 
 	// Channels
-	{
+	if false {
 		if false {
 			numbersStation := make(chan int)
 			// execute broadcast in a seperate thread
@@ -217,6 +274,47 @@ func main() {
 
 	}
 
+	// Bringing it altogether
+	{
+		urls := []string{
+			"http://www.syncfusion.com",
+			"http://www.google.com",
+			"http://www.github.com",
+			"http://www.apple.com",
+			"http://www.golang.org",
+		}
 
+		// create a channel
+		resultsChannel := make(chan WebPage)
+
+		fmt.Println("⭕ Starting process!")
+		// call a goroutine to read each WebPages simultaneously
+		for _, url := range urls {
+			/**
+			* initiate a new goroutine for each URL
+			* so that we cn analyze them concurrently
+			*
+			 */
+			fmt.Println("↗️ initiating Routine!: ", url)
+			go getWebPageLength(url, resultsChannel)
+
+		}
+
+		// store each WebPage result in WebPages
+		results := new(WebPages)
+		for range urls {
+			result := <-resultsChannel
+			results.addElement(result)
+			fmt.Println("🎁 Finished WebPage: ", result.URL)
+		}
+
+		// sort using the implementation of sort.Interface in WebPages
+		for i, page := range *results {
+			fmt.Printf("%d %s: %d bytes. \n", i+1, page.URL, page.Size)
+		}
+
+		fmt.Println("✅ Finished process!")
+
+	}
 
 }
