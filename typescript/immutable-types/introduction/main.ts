@@ -13,3 +13,9 @@ const scoreDoubled = doubleScores(scores);
 // ! scores has been unexpectedly changed
 // ! oof
 console.log( 'scores: ',scores);
+
+/**
+ * In this module, we are going to learn how to create 
+ * immutable types. Immutable types help prevent bugs 
+ * due to unexpected side effects 
+ */
