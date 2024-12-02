@@ -3,4 +3,14 @@ GET https://examples.http-client.intellij.net/get
     ?generated-in=GoLand
 
 ###
+GET localhost:8080
+
+###
 GET localhost:8080/todo
+
+###
+POST localhost:8080/todo
+
+{
+"item": "get groceries"
+}
