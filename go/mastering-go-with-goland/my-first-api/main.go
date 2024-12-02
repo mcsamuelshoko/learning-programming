@@ -15,7 +15,7 @@ type TodoItem struct {
 func main() {
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
 		log.Println("[route] GET:/")
 		_, err := w.Write([]byte("Hello Todo World!"))
 		if err != nil {
@@ -26,10 +26,16 @@ func main() {
 	mux.HandleFunc("GET /todo", func(w http.ResponseWriter, r *http.Request) {
 		log.Println("[route] GET:/todo")
 
-		err := json.NewEncoder(w).Encode(todos)
+		//err := json.NewEncoder(w).Encode(todos)
+		b, err := json.Marshal(todos)
 		if err != nil {
 			log.Fatal(err)
 		}
+		_, err = w.Write(b)
+		if err != nil {
+			log.Fatal(err)
+		}
+		return
 	})
 
 	mux.HandleFunc("POST /todo", func(writer http.ResponseWriter, r *http.Request) {
