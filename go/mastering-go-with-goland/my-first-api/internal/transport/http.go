@@ -49,7 +49,13 @@ func NewServer(todoSvc *todo.Service) *Server {
 			writer.WriteHeader(http.StatusBadRequest)
 			return
 		}
-		todoSvc.Add(t.Item)
+
+		//adding todos
+		err = todoSvc.Add(t.Item)
+		if err != nil {
+			writer.WriteHeader(http.StatusBadRequest)
+			return
+		}
 		writer.WriteHeader(http.StatusCreated)
 		return
 
