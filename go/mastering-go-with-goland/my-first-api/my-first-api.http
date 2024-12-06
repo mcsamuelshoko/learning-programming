@@ -12,5 +12,17 @@ GET localhost:8080/todo
 POST localhost:8080/todo
 
 {
-"item": "get groceries"
+"item": "do golang in 2 days"
+}
+
+###
+
+GET localhost:8080/search?q=gol
+
+
+###
+DELETE localhost:8080/todo
+
+{
+"item": "do golang in 5 days"
 }
