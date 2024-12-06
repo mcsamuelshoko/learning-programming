@@ -14,7 +14,7 @@ func TestService_Search(t *testing.T) {
 		query           string
 		expectendResult []string
 	}{
-		// TODO: Add test cases.
+		// test cases.
 		{
 			name:            "Given a todo of shop, and a search of i should get shop back",
 			todosToAdd:      []string{"shop"},
@@ -26,6 +26,18 @@ func TestService_Search(t *testing.T) {
 			todosToAdd:      []string{"Shopping"},
 			query:           "shop",
 			expectendResult: []string{"Shopping"},
+		},
+		{
+			name:            "spaces",
+			todosToAdd:      []string{"go Shopping"},
+			query:           "go",
+			expectendResult: []string{"go Shopping"},
+		},
+		{
+			name:            "whitespace at the beginning of the word",
+			todosToAdd:      []string{" how about da.."},
+			query:           "HoW",
+			expectendResult: []string{" how about da.."},
 		},
 	}
 	for _, tt := range tests {

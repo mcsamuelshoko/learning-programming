@@ -5,17 +5,17 @@ import (
 	"strings"
 )
 
-type item struct {
+type Item struct {
 	Task  string
 	State string
 }
 
 type Service struct {
-	todos []item
+	todos []Item
 }
 
 func NewService() *Service {
-	return &Service{todos: make([]item, 0)}
+	return &Service{todos: make([]Item, 0)}
 }
 
 func (svc *Service) Add(todo string) error {
@@ -25,7 +25,7 @@ func (svc *Service) Add(todo string) error {
 			return errors.New("todo already exists")
 		}
 	}
-	todoItem := new(item)
+	todoItem := new(Item)
 	todoItem.Task = todo
 	todoItem.State = "unfinished"
 	//adding new to todos
@@ -33,7 +33,7 @@ func (svc *Service) Add(todo string) error {
 	return nil
 }
 
-func (svc *Service) AddItem(todoItem item) error {
+func (svc *Service) AddItem(todoItem Item) error {
 	// checking if todos already exists
 	for _, t := range svc.todos {
 		if t.Task == todoItem.Task {
@@ -48,13 +48,13 @@ func (svc *Service) AddItem(todoItem item) error {
 func (svc *Service) Search(query string) []string {
 	result := make([]string, 0)
 	for _, t := range svc.todos {
-		if strings.Contains(t.Task, query) {
+		if strings.Contains(strings.ToLower(t.Task), strings.ToLower(query)) {
 			result = append(result, t.Task)
 		}
 	}
 	return result
 }
 
-func (svc *Service) GetAll() []item {
+func (svc *Service) GetAll() []Item {
 	return svc.todos
 }
