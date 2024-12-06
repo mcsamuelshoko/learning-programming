@@ -51,7 +51,7 @@ func (db *DB) GetAllItems(ctx context.Context) ([]Item, error) {
 		}
 		items = append(items, item)
 	}
-
+	return items, nil
 }
 
 func (db *DB) Close() {
