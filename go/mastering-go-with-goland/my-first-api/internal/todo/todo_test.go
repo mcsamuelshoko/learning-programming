@@ -21,6 +21,12 @@ func TestService_Search(t *testing.T) {
 			query:           "sh",
 			expectendResult: []string{"shop"},
 		},
+		{
+			name:            "Still returns shopping even if casing is different",
+			todosToAdd:      []string{"Shopping"},
+			query:           "shop",
+			expectendResult: []string{"Shopping"},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
