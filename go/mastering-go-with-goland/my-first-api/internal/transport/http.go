@@ -40,6 +40,27 @@ func NewServer(todoSvc *todo.Service) *Server {
 		return
 	})
 
+	mux.HandleFunc("GET /search", func(w http.ResponseWriter, r *http.Request) {
+		log.Println("[route] GET:/search")
+		query := r.URL.Query().Get("q")
+		if query == "" {
+			w.WriteHeader(http.StatusBadRequest)
+		}
+		// search for query
+		todos := todoSvc.Search(query)
+		bTodos, err := json.Marshal(todos)
+		if err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+		_, err = w.Write(bTodos)
+		if err != nil {
+			log.Println(err)
+			return
+		}
+
+	})
+
 	mux.HandleFunc("POST /todo", func(writer http.ResponseWriter, r *http.Request) {
 		log.Println("[route] POST:/todo")
 		var t TodoItem
