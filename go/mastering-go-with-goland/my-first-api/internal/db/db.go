@@ -15,7 +15,7 @@ type Item struct {
 	Status string
 }
 
-func new(user, password, host, dbname string, port int) (*DB, error) {
+func New(user, password, host, dbname string, port int) (*DB, error) {
 	connStr := fmt.Sprintf("postgres://%s:%s@%s:%d/%s", user, password, host, port, dbname)
 	pool, err := pgxpool.Connect(context.Background(), connStr)
 	if err != nil {
