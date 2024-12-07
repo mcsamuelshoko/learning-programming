@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>URL Shortener</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('shortenForm');
+            const resultDiv =  document.getElementById('result');
+
+            if(form){
+                form.addEventListener('submit', async function (event){
+                    event.preventDefault()
+                    const url = document.getElementById('urlInput').value;
+
+                    const response = await fetch('/shorten',{
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                        body: `url=${encodeURIComponent(url)}`
+                    });
+                    resultDiv.innerText =  await response.text()
+                });
+            }
+        })
+    </script>
 </head>
 <body>
-    URL Shortener
+    <h1>URL Shortener</h1>
+    <form id="shortenForm" action="/shorten" method="POST">
+        <label for="urlInput">url</label>
+        <input type="text" name="url" id="urlInput" placeholder="Enter URL to shorten" required/>
+        <button type="submit">Shorten</button>
+    </form>
+    <div id="result"></div>
 </body>
 </html>

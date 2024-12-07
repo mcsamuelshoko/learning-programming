@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        alert("starting shorten script")
+        document.addEventListener('DOMContentLoaded', function() {
+            copyButton.addEventListener('click',function () {
+                const shortURL = copyButton.getAttribute('data-url');
+                navigator.clipboard.writeText(
+                    window.location.origin + '/' + shortURL
+                ).then(()=> {
+                    alert('Copied to clipboard');
+                });
+            })
+        })
+        alert("finishing shorten script")
+    </script>
+    <meta charset="UTF-8">
+    <title>Shorten</title>
+</head>
+<body>
+<h1>Shortened URL</h1>
+
+<p>
+    Your shortened URL is: <a href="//{{.ShortURL}}" target="_blank">{{.ShortURL}}</a>
+</p>
+<button id="copyButton" data-url="{{.ShortURL}}">
+    Copy to Clipboard
+</button>
+
+</body>
+</html>

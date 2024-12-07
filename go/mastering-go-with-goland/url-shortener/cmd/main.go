@@ -1,24 +1,13 @@
 package main
 
 import (
-	"html/template"
 	"log"
 	"net/http"
+	"url-shortener/internal/controllers"
 )
 
 func main() {
-	http.HandleFunc("/", ShowHomePage)
+	http.HandleFunc("/", controllers.ShowIndex)
+	http.HandleFunc("/shorten", controllers.Shorten)
 	log.Fatalln(http.ListenAndServe(":8080", nil))
-}
-
-func ShowHomePage(w http.ResponseWriter, _ *http.Request) {
-	tmpl, err := template.ParseFiles("internal/views/index.html")
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	if err := tmpl.Execute(w, nil); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
 }
