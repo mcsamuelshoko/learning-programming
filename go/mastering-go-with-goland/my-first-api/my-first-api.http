@@ -12,12 +12,12 @@ GET localhost:8080/todo
 POST localhost:8080/todo
 
 {
-"item": "do golang in 2 days"
+"item": "thank you Jesus!"
 }
 
 ###
 
-GET localhost:8080/search?q=gol
+GET localhost:8080/search?q=thank
 
 
 ###
