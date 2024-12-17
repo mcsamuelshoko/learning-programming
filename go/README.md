@@ -6,11 +6,11 @@ fmt.Print('hello golang!');
 [🛣️[Golang route](https://medium.com/p-society/master-plan-to-learn-golang-edbf85c7ae83)]
 ---
 
-### Will be learning with content which includes these links  
-**LearnInXYMinutes:** [<https://learnxinyminutes.com/docs/go/>]  
-**Go Succinctly:**  [<https://www.syncfusion.com/succinctly-free-ebooks/confirmation/go-succinctly>]  
-**Learn Go:** [<https://go.dev/tour/>]  
-**Go by example /Reference:** [<https://gobyexample.com/>]  
+### Will be learning with content which includes these links
+**LearnInXYMinutes:** [<https://learnxinyminutes.com/docs/go/>]
+**Go Succinctly:**  [<https://www.syncfusion.com/succinctly-free-ebooks/confirmation/go-succinctly>]
+**Learn Go:** [<https://go.dev/tour/>]
+**Go by example /Reference:** [<https://gobyexample.com/>]
 
 ---
 ### *📓 [Polyglot Notebook Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) for [vscode](https://code.visualstudio.com/)
@@ -26,13 +26,13 @@ fmt.Print('hello golang!');
 |2. Introducing Go|✅ |WoW,... just WoW!|
 |3. Lets Go! |✅ |thanks|
 |4. Variables, Constants & Assignments|✅ |thats nice,.. thanks|
-|5. Basic Data Types|⭕ |--|
-|6. Control Structures|⭕ |--|
-|7. Arrays-Slices-&-Maps|⭕ |--|
-|8. User-Defined-Types|⭕ |--|
-|9. Concurrency |⭕ |--|
-|10. Standard Packages |⭕ |--|
-|11. Go Further |⭕ |--|
+|5. Basic Data Types|✅ |nice|
+|6. Control Structures|✅ |oh,.. haha|
+|7. Arrays-Slices-&-Maps|✅ |needs getting used to, and they're great|
+|8. User-Defined-Types|✅ |nice, more line ni\`C\`e|
+|9. Concurrency |✅ |ooh, that's pretty good|
+|10. Standard Packages |✅ |awesome stuff|
+|11. Go Further |✅ |done and done, nice !|
 
 
 <br/><br/>
@@ -55,4 +55,4 @@ fmt.Print('hello golang!');
 
 |Topic | Completed | Comment|
 |---|:---:|---|
-|Channels|⭕ |--|  
+|Channels|⭕ |--|
