@@ -32,3 +32,12 @@ author3 = %{first_name: "Martin", last_name: "Fowler"}
 author4 = %{first_name: "Mc Samuel", last_name: "Shoko"}
 
 IO.puts Printable.to_csv [author1, author2, author3, author4]
+
+# Implementing for integers
+defimpl Printable, for: Integer do
+  def to_csv(i) do
+    to_string(i)
+  end
+end
+
+IO.puts Printable.to_csv([1,2,3,4,5,6,7])
