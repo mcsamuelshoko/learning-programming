@@ -9,9 +9,9 @@ IO.puts('hello world!')
 ### Will be learning with content which includes these links
 
 **Helpful-Documentation:** [<http://elixir-lang.org/docs.html>]
-**Cheatsheet PDF:** [<https://media.pragprog.com/titles/elixir/ElixirCheat.pdf>]  
-**LearnXinYminutes:** [<https://learnxinyminutes.com/docs/elixir/>]  
-**Succinctly Series 🆓Book:** [<https://www.syncfusion.com/succinctly-free-ebooks?searchkey=elixir&type=all>]  
+**Cheatsheet PDF:** [<https://media.pragprog.com/titles/elixir/ElixirCheat.pdf>]
+**LearnXinYminutes:** [<https://learnxinyminutes.com/docs/elixir/>]
+**Succinctly Series 🆓Book:** [<https://www.syncfusion.com/succinctly-free-ebooks?searchkey=elixir&type=all>]
 
 ---
 
@@ -56,11 +56,11 @@ IO.puts('hello world!')
 |Pattern Matching |✅ | aaah, very useful |
 |Recursion |✅ | thank you \:\) |
 |Helpful Modules |✅ |aaah nice, truly helpful |
-|Control flow |⭕ | |
-|Guards |⭕ | |
-|Pipe Operator |⭕ | |
-|Type specifications |⭕ | |
-|Behavior and protocols |⭕ | |
+|Control flow |✅ | nice |
+|Guards |✅ | strangely useful|
+|Pipe Operator |✅ | dayuuuumn |
+|Type specifications |✅ | aah i see, a man of culture |
+|Behavior and protocols |✅ | divine & pristine, magnificent !  |
 |Macros |⭕ | |
 |The Platform |⭕ | |
 |Elixir Applications |⭕ | |
