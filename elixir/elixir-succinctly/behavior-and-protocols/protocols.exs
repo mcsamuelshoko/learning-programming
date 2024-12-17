@@ -18,3 +18,17 @@ end
 
 author = %{first_name: "Dave", last_name: "Thomas"}
 IO.puts Printable.to_csv(author)
+
+# Implementing for a List
+defimpl Printable, for: List do
+  def to_csv(list) do
+    Enum.map(list, fn item -> Printable.to_csv(item) end)
+  end
+end
+
+author1 = %{first_name: "Dave", last_name: "Thomas"}
+author2 = %{first_name: "Kent", last_name: "Beck"}
+author3 = %{first_name: "Martin", last_name: "Fowler"}
+author4 = %{first_name: "Mc Samuel", last_name: "Shoko"}
+
+IO.puts Printable.to_csv [author1, author2, author3, author4]
