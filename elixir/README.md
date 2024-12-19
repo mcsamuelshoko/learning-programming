@@ -61,9 +61,9 @@ IO.puts('hello world!')
 |Pipe Operator |✅ | dayuuuumn |
 |Type specifications |✅ | aah i see, a man of culture |
 |Behavior and protocols |✅ | divine & pristine, magnificent !  |
-|Macros |⭕ | |
-|The Platform |⭕ | |
-|Elixir Applications |⭕ | |
+|Macros |✅ |lgtm |
+|The Platform |✅ |good stuff |
+|Elixir Applications |✅ |nice |
 |GenServer |⭕ | |
 |Supervisors |⭕ | |
 |Sample Application |⭕ | |
