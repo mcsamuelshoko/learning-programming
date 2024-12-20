@@ -64,8 +64,8 @@ IO.puts('hello world!')
 |Macros |✅ |lgtm |
 |The Platform |✅ |good stuff |
 |Elixir Applications |✅ |nice |
-|GenServer |⭕ | |
-|Supervisors |⭕ | |
+|GenServer |⭕ |--|
+|Supervisors |⭕ |--|
 |Sample Application |⭕ | |
 |The first test |⭕ | |
 |Control the rover |⭕ | |
