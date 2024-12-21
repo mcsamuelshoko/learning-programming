@@ -66,7 +66,7 @@ IO.puts('hello world!')
 |Elixir Applications |✅ |nice |
 |GenServer |⭕ |--|
 |Supervisors |⭕ |--|
-|Sample Application |⭕ | |
+|Sample Application |⭕ |--|
 |The first test |⭕ | |
 |Control the rover |⭕ | |
 |Role supervisor |⭕ | |
