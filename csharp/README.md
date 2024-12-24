@@ -17,7 +17,7 @@ Console.WriteLine("Hello world!");
 
 <br/>
 
-- **🎓 Microsoft Certification Course:** [<https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/>]
+- **🆓🎓 Microsoft Certification Course:** [<https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/>]
 
 <br/>
 
