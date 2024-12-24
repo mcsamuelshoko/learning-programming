@@ -13,7 +13,21 @@ defmodule MyServer do
     GenServer.call(__MODULE__, :ping)
   end
 
+  def crash do
+    GenServer.call(__MODULE__, :crash)
+  end
+
   def handle_call(:ping, _from, state) do
     {:reply, :pong, state}
+  end
+
+  def handle_call(:crash, _from, state) do
+    throw("Bang!")
+    {:reply, :error, state}
+  end
+
+  # handling state on crash for persistance
+  def terminate(reason, state) do
+    # dump the state
   end
 end
