@@ -8,7 +8,7 @@ Console.WriteLine("Hello world!");
 
 ### Will be learning with content which includes these links
 
-**Cheatsheet PDF:** [<https://media.pragprog.com/titles/elixir/ElixirCheat.pdf>]
+**Cheatsheet PDF:** [<https://zerotomastery.io/cheatsheets/csharp-cheat-sheet/>]
 **LearnXinYminutes:** [<https://learnxinyminutes.com/docs/csharp/>]
 
 - **🆓 C# Succinctly Book:** [<https://www.syncfusion.com/succinctly-free-ebooks/csharp>]
