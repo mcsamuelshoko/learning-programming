@@ -16,7 +16,7 @@ defmodule Rover do
   end
 
   def handle_call(:get_state, _from, state) do
-    {:reply, {:ok, {state.x, state.y, state.direction}}, state}
+    {:reply, {:ok, {state.x, state.y, state.direction, state.name}}, state}
   end
 
 end
