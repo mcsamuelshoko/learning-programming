@@ -5,5 +5,6 @@ class Greetings
     static void Main()
     {
         Console.WriteLine("Greetings!");
+        Console.ReadKey();
     }
 }
