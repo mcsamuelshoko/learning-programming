@@ -64,8 +64,61 @@ class Greetings
 
             // string interpolation
             Console.WriteLine($"{item}        {amount}");
-
+            Console.WriteLine($"{nameof(item)}: {item, -10} {nameof(amount)}: {amount:C}");
         }
 
+        // Branching Statements
+        {
+            decimal priceGain = 2.5m;
+            string action2 = "Sell";
+            if (priceGain > 2m)
+            {
+                action2 = "Buy";
+            }
+
+            // using an else case
+            string action3 = "Do Nothing";
+            if (priceGain <= 2m)
+            {
+                action3 = "Sell";
+            }
+            else
+            {
+                action3 = "Buy";
+            }
+
+            // adding an if-else clause
+            string action4 = null;
+            if (priceGain <= 2m)
+            {
+                action4 = "Sell";
+            }
+            else if (priceGain > 2m && priceGain < 3m)
+            {
+                action4 = "Do Nothing";
+            }
+            else
+            {
+                action4 = "Sell";
+            }
+
+            // switch statement
+            string currentWeather = "rain";
+            string equipment = null;
+            switch (currentWeather)
+            {
+                case "sunny":
+                    equipment = "sunglasses";
+                    break;
+                case "rain":
+                    equipment = "umbrella";
+                    break;
+                case "cold":
+
+                default:
+                    equipment = "jacket";
+                    break;
+            }
+        }
     }
 }
