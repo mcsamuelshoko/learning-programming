@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Greetings
 {
@@ -119,6 +120,34 @@ class Greetings
                     equipment = "jacket";
                     break;
             }
+
+            // Arrays & Collections
+            int[] oddNumbers = { 1, 3, 5 };
+            int firstOdd = oddNumbers[0];
+            int lastOdd = oddNumbers[2];
+
+            string[] names = new string[3];
+            names[1] = "Joe";
+
+            // HoW to use a List
+            List<decimal> stockPrices = new List<decimal>();
+            stockPrices.Add(56.32m);
+            stockPrices.Add(73.86m);
+            decimal secondStockPrice = stockPrices[1];
+
+            // HoW to use a Stack
+            Stack<string> litterBin = new Stack<string>();
+            litterBin.Push("paper");
+            litterBin.Push("cups");
+            litterBin.Push("pencil");
+            string topItem = litterBin.Pop();
+
+            // HoW to use a Queue
+            Queue<int> scores = new Queue<int>();
+            scores.Enqueue(100);
+            scores.Enqueue(43);
+            scores.Enqueue(8);
+            int firstScore = scores.Dequeue();
         }
     }
 }
