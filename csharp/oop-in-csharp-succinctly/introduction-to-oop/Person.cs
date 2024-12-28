@@ -67,18 +67,55 @@ using System;
 }
 
 // Abstract Classes
-public abstract class Person
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public abstract string GetFullName();
+{ 
+    public abstract class Person
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public abstract string GetFullName();
+    }
+
+    public class Employee: Person
+    {
+        public decimal Salary { get; set; }
+        public override string GetFullName()
+        {
+            return LastName + ", " + FirstName;
+        }
+    }
 }
 
-public class Employee: Person
-{
-    public decimal Salary { get; set; }
-    public override string GetFullName()
+// A sealed class
+{ 
+    public sealed class Person
     {
-        return LastName + ", " + FirstName;
+        public string Firstname { get; set; }
+        public string LastName { get; set; }
+        public string GetFullName()
+        {
+            return FirstName + " " + LastName;
+        }
     }
+}
+
+// A sealed method
+{ 
+    public class Person
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public virtual string GetFullName()
+        {
+            return FirstName + " " + LastName;
+        }
+    }
+
+    public class Employee : Person
+    {
+        public decimal Salary { get; set; }
+        public sealed override string GetFullName()
+        {
+            return LastName + "' " + FirstName;
+        }
+
 }
