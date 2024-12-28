@@ -119,3 +119,33 @@ using System;
         }
 
 }
+
+// Composition
+{
+    // No go
+    {
+        public class Engine
+        {
+            // ...
+        }
+
+        public class Car : Engine
+        {
+            //...
+        }
+    }
+
+    // Correct implementation
+    {
+        public class Engine
+        {
+            //...
+        }
+
+        public class Car
+        {
+            private Engine engine = new Engine();
+            //...
+        }
+    }
+}
