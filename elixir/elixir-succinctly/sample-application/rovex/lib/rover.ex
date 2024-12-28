@@ -27,13 +27,14 @@ defmodule Rover do
   end
 
   def handle_cast(:go_forward, state) do
-    new_state = case state.direction do
-      :N -> %Rover{ state | x: state.x, y: mod(state.y + 1, @world_height) }
-      :S -> %Rover{ state | x: state.x, y: mod(state.y - 1, @world_height) }
-      :E -> %Rover{ state | x: mod(state.x + 1, @world_width), y: state.y }
-      :W -> %Rover{ state | x: mod(state.x - 1, @world_width), y: state.y }
-    end
+    new_state =
+      case state.direction do
+        :N -> %Rover{state | x: state.x, y: Integer.mod(state.y + 1, @world_height)}
+        :S -> %Rover{state | x: state.x, y: Integer.mod(state.y - 1, @world_height)}
+        :E -> %Rover{state | x: Integer.mod(state.x + 1, @world_width), y: state.y}
+        :W -> %Rover{state | x: Integer.mod(state.x - 1, @world_width), y: state.y}
+      end
+
     {:noreply, new_state}
   end
-
 end
