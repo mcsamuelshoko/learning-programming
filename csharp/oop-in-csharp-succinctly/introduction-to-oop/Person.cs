@@ -34,32 +34,51 @@ using System;
 }
 
 // Method Overriding
-public class Person
+{ 
+    public class Person
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public virtual string GetFullName()
+        {
+            return FirstName + " " + LastName;
+        }
+    }
+
+    public class Employee : Person
+    {
+        public decimal Salary { get; set; }
+        public override string GetFullName()
+        {
+            string originalValue = base.GetFullName();
+            return LastName + ", " + FirstName;
+        }
+    }
+
+    //QSTN: what will the following code print ?
+    //ANS:  Shoko, Mc Samuel
+    Person person = new Employee();
+    person.FirstName = "Mc Samuel";
+    person.LastName = "Shoko";
+    string fullName = person.GetFullName();
+    Console.WriteLine(fullName);
+    // press any key to quit.
+    Console.ReadKey();
+}
+
+// Abstract Classes
+public abstract class Person
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public virtual string GetFullName()
-    {
-        return FirstName + " " + LastName;
-    }
+    public abstract string GetFullName();
 }
 
-public class Employee : Person
+public class Employee: Person
 {
     public decimal Salary { get; set; }
     public override string GetFullName()
     {
-        string originalValue = base.GetFullName();
         return LastName + ", " + FirstName;
     }
 }
-
-//QSTN: what will the following code print ?
-//ANS:  Shoko, Mc Samuel
-Person person = new Employee();
-person.FirstName = "Mc Samuel";
-person.LastName = "Shoko";
-string fullName = person.GetFullName();
-Console.WriteLine(fullName);
-// press any key to quit.
-Console.ReadKey();
