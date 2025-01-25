@@ -25,4 +25,11 @@ defmodule Rover.Web.Router do
       _ -> send_resp(conn, 500, encode(%{message: "generic error"}))
     end
   end
+
+  post "/command" do
+    rover_name = conn.body_params["name"]
+    command = String.to_atom(conn.body_params["command"])
+    Rover.send_command(rover_name, command)
+    send_resp(conn, 204, encode(%{}))
+  end
 end
