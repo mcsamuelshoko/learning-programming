@@ -34,7 +34,7 @@ defmodule Rover do
         :E -> %Rover{state | x: Integer.mod(state.x + 1, @world_width), y: state.y}
         :W -> %Rover{state | x: Integer.mod(state.x - 1, @world_width), y: state.y}
       end
-
+    WorldMap.update_rover(state.name, state.x, state.y)
     {:noreply, new_state}
   end
 
