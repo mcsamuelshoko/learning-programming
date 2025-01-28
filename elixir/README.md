@@ -64,10 +64,10 @@ IO.puts('hello world!')
 |Macros |✅ |lgtm |
 |The Platform |✅ |good stuff |
 |Elixir Applications |✅ |nice |
-|GenServer |⭕ |--|
-|Supervisors |⭕ |--|
-|Sample Application |⭕ |--|
-|The first test |⭕ | |
-|Control the rover |⭕ | |
-|Role supervisor |⭕ | |
-|Introducing Plug and Cowboy |⭕ | |
+|GenServer |✅ |very good stuff|
+|Supervisors |✅ |oh, thats unique|
+|Sample Application |✅ |interesting.|
+|The first test |✅ |love it |
+|Control the rover |✅ |gr8.|
+|Role supervisor |✅ |gr8 again |
+|Introducing Plug and Cowboy |✅ |fiiire, done and done |
