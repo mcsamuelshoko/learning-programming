@@ -1,0 +1,9 @@
+= Hello Ascii
+
+Alright alright here goes
+
+[mermaid]
+----
+flowchart LR
+    OH--> YES!
+----
