@@ -29,7 +29,7 @@ hello asciidoc!
 
 <br/>
 
-###### *The list of topics is from the 'learn typescript' website
+###### *The list of topics is from the 'video links' website
 
 |Topic | Completed | Comment|
 |---|:---:|---|
