@@ -1,5 +1,3 @@
-<https://www.betterspecs.org/>
-
 hello ruby!
 
 ```ruby
@@ -14,6 +12,7 @@ puts  "hello world!"
 - **Learn Ruby Free:** [<https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby>]
 - **🔥 Ruby Book Link**: [<https://www.amazon.com/Book-Ruby-Hands-Guide-Adventurous/dp/1593272944>]
 - **Reference 🆓Book:** [<https://books.goalkicker.com/RubyBook/>]
+- > **Testing Specs:** <https://www.betterspecs.org/>
 
 ---
 
@@ -27,5 +26,7 @@ puts  "hello world!"
 
 | |Topic | Completed | Comment|
 |---|---|:---:|---|
-| |Strings, Numbers, Classes ...|⭕ |--|
-| |Class Hierarchies, Attributes, and Class Variables|⭕|--|
+| | Strings, Numbers, Classes ...|⭕ |--|
+| | Class Hierarchies, Attributes, and Class Variables|⭕|--|
+| | Strings & Ranges |⭕ |--|
+| | Arrays & Hashes |⭕ |--|
