@@ -1,3 +1,3 @@
-print('Enter your name')
+print('Enter your name: ')
 name = gets()
 puts( "Hi #{name}" )
