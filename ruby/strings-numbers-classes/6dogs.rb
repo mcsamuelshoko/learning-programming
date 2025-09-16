@@ -6,6 +6,10 @@ class Dog
   def get_name
     return @myName
   end
+
+  def talk
+    return 'woof!'
+  end
 end
 
 # create object instances
