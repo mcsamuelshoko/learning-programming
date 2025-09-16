@@ -11,3 +11,9 @@ end
 a = "hello"
 b = 123
 c = Treasure.new( "ring", "a glittery gold thing" )
+
+# ispect using the internal ruby method
+
+p( a )
+p( b )
+p( c )
