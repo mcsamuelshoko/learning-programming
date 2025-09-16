@@ -2,6 +2,10 @@ class Dog
   def set_name( aName )
     @myName = aName
   end
+
+  def get_name
+    return @myName
+  end
 end
 
 # create object instances
