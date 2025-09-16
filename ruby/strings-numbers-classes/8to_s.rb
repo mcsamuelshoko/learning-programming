@@ -14,3 +14,10 @@ puts( Object.to_s )
 puts( String.to_s )
 puts( 100.to_s )
 puts( Treasure.to_s )
+
+
+# Create Treasure object
+
+t = Treasure.new( "Sword", "A lovely Elvish weapon" )
+puts(t.to_s)
+puts(t.inspect)
