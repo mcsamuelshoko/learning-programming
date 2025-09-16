@@ -28,3 +28,7 @@ mydog = Dog.new
 mydog.set_name( 'Fido' )
 puts(mydog.get_name)
 puts(mydog.talk)
+
+# ruby nils on undefined properties
+someotherdog = Dog.new
+puts(someotherdog.get_name)
