@@ -26,7 +26,8 @@ puts  "hello world!"
 
 | |Topic | Completed | Comment|
 |---|---|:---:|---|
-| | Strings, Numbers, Classes ...|⭕ |--|
+| | Strings, Numbers, Classes ...|✅|`ah i see, interesting`|
 | | Class Hierarchies, Attributes, and Class Variables|⭕|--|
 | | Strings & Ranges |⭕ |--|
 | | Arrays & Hashes |⭕ |--|
+| |  |⭕|--|
