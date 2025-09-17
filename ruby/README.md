@@ -30,4 +30,12 @@ puts  "hello world!"
 | 02.| Class Hierarchies, Attributes, and Class Variables|⭕|--|
 | 03.| Strings & Ranges |⭕ |--|
 | 04.| Arrays & Hashes |⭕ |--|
-| |  |⭕|--|
+| 05.| Loop and Iterations|⭕ |--|
+| 06.|  Conditional Statements|⭕ |--|
+| 07.|  Methods|⭕ |--|
+| 08.|  Passing Arguments and Returning Values|⭕ |--|
+| 09.|  Exception Handling|⭕ |--|
+| 10.| Blocks, Procs & lambdas  |⭕|--|
+| 11.| Symbols|⭕ |--|
+| 12.| Modules & Mixins|⭕ |--|
+| |  |⭕ |--|
