@@ -12,11 +12,11 @@ class Thing
     @name = aName
   end
 
-  def get_description
+  def description
     return @description
   end
 
-  def set_description( aDescription )
+  def description=( aDescription )
     @description = aDescription
   end
 
