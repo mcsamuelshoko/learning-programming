@@ -28,4 +28,4 @@ t = Treasure.new("Coin","shiny golden coin")
 t.value = 800
 
 # looking inside the object methods
-puts "This is treasure1: #{t1.inspect}"
+puts "This is treasure1: #{t.inspect}"
