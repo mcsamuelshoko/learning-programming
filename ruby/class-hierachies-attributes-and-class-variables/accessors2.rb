@@ -15,3 +15,11 @@ class Thing
   end
 
 end
+
+class Treasure < Thing
+  attr_accessor :value
+
+  def initialize( aName, aDescription)
+    super( aName, aDescription )
+  end
+end
