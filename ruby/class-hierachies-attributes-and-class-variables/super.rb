@@ -60,5 +60,8 @@ end
 # t3.aMethod( "A New Thing3", "and a new Thing3 description",1000)
 
 # Object `t4`
-t4 = Thing4.new( "A Thing4", "the nicest Thing4 you will ever see", 10 )
-t4.aMethod
+# t4 = Thing4.new( "A Thing4", "the nicest Thing4 you will ever see", 10 )
+# t4.aMethod
+
+t5 = Thing5.new( "A Thing5", "a very simple Thing5", 40 )
+t5.aMethod
