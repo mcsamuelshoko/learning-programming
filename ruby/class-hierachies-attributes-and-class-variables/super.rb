@@ -46,3 +46,7 @@ end
 
 class Thing5 < Thing4
 end
+
+# Instantiate class object `t`
+t = Thing.new( "A Thing", "a lovely thing full of thinginess" )
+t.aMethod( "A New Thing" )
