@@ -55,5 +55,10 @@ end
 # t2 = Thing2.new( "A Thing2", "a Thing2 thing of great beauty" )
 # t2.aMethod( "A New Thing2", "a new Thing2 description" )
 
-t3 = Thing3.new("A Thing3", "a Thing3 full of Thing and Thing2iness",500)
-t3.aMethod( "A New Thing3", "and a new Thing3 description",1000)
+# Object `t3`
+# t3 = Thing3.new("A Thing3", "a Thing3 full of Thing and Thing2iness",500)
+# t3.aMethod( "A New Thing3", "and a new Thing3 description",1000)
+
+# Object `t4`
+t4 = Thing4.new( "A Thing4", "the nicest Thing4 you will ever see", 10 )
+t4.aMethod
