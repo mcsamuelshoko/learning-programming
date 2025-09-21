@@ -52,5 +52,8 @@ end
 # t.aMethod( "A New Thing" )
 
 # Add object 2
-t2 = Thing2.new( "A Thing2", "a Thing2 thing of great beauty" )
-t2.aMethod( "A New Thing2", "a new Thing2 description" )
+# t2 = Thing2.new( "A Thing2", "a Thing2 thing of great beauty" )
+# t2.aMethod( "A New Thing2", "a new Thing2 description" )
+
+t3 = Thing3.new("A Thing3", "a Thing3 full of Thing and Thing2iness",500)
+t3.aMethod( "A New Thing3", "and a new Thing3 description",1000)
