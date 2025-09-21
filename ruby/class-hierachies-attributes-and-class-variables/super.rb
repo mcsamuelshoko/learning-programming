@@ -48,5 +48,9 @@ class Thing5 < Thing4
 end
 
 # Instantiate class object `t`
-t = Thing.new( "A Thing", "a lovely thing full of thinginess" )
-t.aMethod( "A New Thing" )
+# t = Thing.new( "A Thing", "a lovely thing full of thinginess" )
+# t.aMethod( "A New Thing" )
+
+# Add object 2
+t2 = Thing2.new( "A Thing2", "a Thing2 thing of great beauty" )
+t2.aMethod( "A New Thing2", "a new Thing2 description" )
