@@ -14,6 +14,10 @@ hello asciidoc!
   - [<https://youtu.be/VTjLTso0JjQ>]
   - [<https://youtu.be/KbmpBZO4EoY>]
   - [<https://youtu.be/-jeb_YFnODM>]
+
+  - *Antora*
+    - 📙[Antora: Documentation Sites for Software Teams by Dan Allen](https://youtu.be/BAJ8F7yQz64)
+
 - **Quick Reference:**
   - [<https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/>]
   - [<https://www.writethedocs.org/guide/writing/asciidoc/>]
